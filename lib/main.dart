@@ -1,0 +1,31 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:responsive_builder/responsive_builder.dart';
+import 'package:sizer/sizer.dart';
+
+import 'views/screens/screen_onboarding.dart';
+
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(MyApp());
+}
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ResponsiveApp(builder: (context){
+      return Sizer(builder: (context, orientation, deviceType) {
+        return ResponsiveApp(
+            builder: (context){
+              return GetMaterialApp(
+                home: ScreenOnboarding(),
+                theme: new ThemeData(scaffoldBackgroundColor: Colors.white),
+                debugShowCheckedModeBanner: false,
+              );
+            }
+        );
+      });
+    });
+  }
+}
