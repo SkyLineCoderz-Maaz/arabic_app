@@ -1,11 +1,9 @@
-import 'package:arabic_app/widgts/LargeText.dart';
-import 'package:arabic_app/widgts/container_decoration.dart';
-import 'package:arabic_app/widgts/my_input_field.dart';
+import 'package:arabic_app/widgts/Text_Styles.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
-
+import '../../widgts/custom_button.dart';
 import 'screen_login.dart';
 
 class ScreenSignUp extends StatefulWidget {
@@ -26,171 +24,118 @@ class _ScreenSignUpState extends State<ScreenSignUp> {
           backgroundColor: Colors.white,
         ),
         body: Padding(
-
           padding:  EdgeInsets.symmetric(horizontal: 25.sp,vertical: 20.sp),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              Center(
-                child: LargeText(text:
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                LargeText(text:
                   ' تسجيل مستخدم جديد',
                 ),
-              ),
-              Align(
-                alignment: Alignment.topRight,
-                child: SmallText(text:
+                SmallText(text:
                   'الاسم',
+                  font: 18.sp,
                 ),
-              ),
-              Container(
-                height: 43.sp,
-                child: TextField(
-                  textAlign: TextAlign.start,
-                  decoration: InputDecoration(
-                    hintText: 'الاسم',
-                    contentPadding: EdgeInsets.only(left: 2.h, bottom: 1.h),
-                    border: InputBorder.none,
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(20.sp)),
-                      borderSide: BorderSide(width: 1.5, color: Colors.blueAccent),
-                    ),
-                    enabledBorder:
-                    OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(20.sp)),
-                      borderSide: BorderSide(width: 1.5, color:  Colors.blueAccent),
-                    ),
-                  ),
-                ),
-              ),
-              Text(
-                'الايميل',
-                style: TextStyle(
-                color: Colors.black54,
-                fontSize: 18.sp,
-                fontWeight: FontWeight.w500),
-              ),
-              Container(
-                height: 43.sp,
-                child: TextField(
-                  textAlign: TextAlign.start,
-                  decoration: InputDecoration(
-                    hintText: 'الايميل',
-                    contentPadding: EdgeInsets.only(left: 2.h, bottom: 1.h),
-                    border: InputBorder.none,
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(20.sp)),
-                      borderSide: BorderSide(width: 1.5, color: Colors.blueAccent),
-                    ),
-                    enabledBorder:
-                    OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(20.sp)),
-                      borderSide: BorderSide(width: 1.5, color:  Colors.blueAccent),
+                Container(
+                  height: 43.sp,
+                  child: TextField(
+                    textAlign: TextAlign.end,
+                    decoration: InputDecoration(
+                      hintText: 'الاسم',
+                      contentPadding: EdgeInsets.symmetric(horizontal: 10.sp,vertical: 10.sp),
+                      border: InputBorder.none,
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20.sp)),
+                        borderSide: BorderSide(width: 1.5, color: Colors.blueAccent),
+                      ),
+                      enabledBorder:
+                      OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20.sp)),
+                        borderSide: BorderSide(width: 1.5, color:  Colors.blueAccent),
+                      ),
                     ),
                   ),
                 ),
-              ),
-              Text(
-                'كلمة المرور',
-                style: TextStyle(
-                color: Colors.black54,
-                fontSize: 18.sp,
-                fontWeight: FontWeight.w500),
-              ),
-              Container(
-                height: 43.sp,
-
-                child: TextField(
-                  textAlign: TextAlign.start,
-                  decoration: InputDecoration(
-                    hintText: 'كلمة المرور',
-                    contentPadding: EdgeInsets.only(left: 2.h, bottom: 1.h),
-                    border: InputBorder.none,
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(20.sp)),
-                      borderSide: BorderSide(width: 1.5, color: Colors.blueAccent),
-                    ),
-                    enabledBorder:
-                    OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(20.sp)),
-                      borderSide: BorderSide(width: 1.5, color:  Colors.blueAccent),
+                SmallText(text:
+                  'الايميل',
+                  font: 18.sp,
+                ),
+                Container(
+                  height: 43.sp,
+                  child: TextField(
+                    textAlign: TextAlign.end,
+                    decoration: InputDecoration(
+                      hintText: 'الايميل',
+                      contentPadding: EdgeInsets.symmetric(horizontal: 10.sp,vertical: 10.sp),
+                      border: InputBorder.none,
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20.sp)),
+                        borderSide: BorderSide(width: 1.5, color: Colors.blueAccent),
+                      ),
+                      enabledBorder:
+                      OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20.sp)),
+                        borderSide: BorderSide(width: 1.5, color:  Colors.blueAccent),
+                      ),
                     ),
                   ),
                 ),
-              ),
-              Text(
-                'إعادة كلمة المرور',
-                style: TextStyle(
-                color: Colors.black54,
-                fontSize: 18.sp,
-                fontWeight: FontWeight.w500),
-              ),
-              Row(
-                children: [
-                  Expanded(
-                    flex: 3,
-                    child: MyInputField2(
-                      height: 45.sp,
-                      showBorder: true,
-                      hint: "إعادة كلمة المرور",
-
-                    ),
-                  ),
-                  Expanded(
-                    flex: 1,
-                    child: MyInputField2(
-                      height: 45.sp,
-                      showBorder: true,
-                      hint: "إعادة كلمة المرور",
-
-                    ),
-                  ),
-                ],
-              ),
-              ContainerDecoration(child: Column(children: [
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-              ],)),
-              Container(
-
-                height: 43.sp,
-
-                child: TextField(
-                  keyboardType: TextInputType.emailAddress,
-                  textAlign: TextAlign.end,
-
-                  decoration: InputDecoration(
-                    hintText: 'إعادة كلمة المرور',
-
-                    contentPadding: EdgeInsets.symmetric(horizontal: 8.sp),
-                    border: InputBorder.none,
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(20.sp)),
-                      borderSide: BorderSide(width: 1.5, color: Colors.blueAccent),
-                    ),
-                    enabledBorder:
-                    OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(20.sp)),
-                      borderSide: BorderSide(width: 1.5, color:  Colors.blueAccent),
+                SmallText(text:
+                  'كلمة المرور',
+                  font: 18.sp,
+                ),
+                Container(
+                  height: 43.sp,
+                  child: TextField(
+                    textAlign: TextAlign.end,
+                    decoration: InputDecoration(
+                      hintText: 'كلمة المرور',
+                      contentPadding: EdgeInsets.symmetric(horizontal: 10.sp,vertical: 10.sp),
+                      border: InputBorder.none,
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20.sp)),
+                        borderSide: BorderSide(width: 1.5, color: Colors.blueAccent),
+                      ),
+                      enabledBorder:
+                      OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20.sp)),
+                        borderSide: BorderSide(width: 1.5, color:  Colors.blueAccent),
+                      ),
                     ),
                   ),
                 ),
-              ).marginOnly(bottom: 10.sp),
-              Container(
-                alignment: Alignment.center,
-                height: 43.sp,
-                width: MediaQuery.sizeOf(context).width ,
-                decoration: BoxDecoration(
-                    color: Colors.blueAccent,
-                    borderRadius: BorderRadius.all(Radius.circular(30.sp)),
-                    border: Border.all(color: Colors.white)),
-                child: Text("تسجيل جديد",style: TextStyle(fontSize: 18.sp,color: Colors.white,fontWeight: FontWeight.bold),),
-              ),
-              Center(
-                child: RichText(
+                SmallText(text:
+                  'إعادة كلمة المرور',
+                  font: 18.sp,
+                ),
+                Container(
+                  height: 43.sp,
+                  child: TextField(
+                    textAlign: TextAlign.end,
+                    decoration: InputDecoration(
+                      hintText: 'إعادة كلمة المرور',
+                      contentPadding: EdgeInsets.symmetric(horizontal: 8.sp),
+                      border: InputBorder.none,
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20.sp)),
+                        borderSide: BorderSide(width: 1.5, color: Colors.blueAccent),
+                      ),
+                      enabledBorder:
+                      OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20.sp)),
+                        borderSide: BorderSide(width: 1.5, color:  Colors.blueAccent),
+                      ),
+                    ),
+                  ),
+                ).marginOnly(bottom: 10.sp),
+                CustomButton(
+                    width: 500.sp,
+                    height: 40.sp,
+                    text: ' تسجيل جديد',
+                    textStyle: TextStyle(fontSize: 18.sp),
+                    onPressed: () {}),
+                RichText(
                     text: TextSpan(
                         style: TextStyle(
                             fontSize: 15.sp,
@@ -210,9 +155,9 @@ class _ScreenSignUpState extends State<ScreenSignUp> {
                                     builder: (context) => ScreenLogin()),
                               );
                             }),
-                    ])),
-              ).marginSymmetric(vertical: 25.sp),
-            ],
+                    ])).marginSymmetric(vertical: 25.sp),
+              ],
+            ),
           ),
         ),
       ),

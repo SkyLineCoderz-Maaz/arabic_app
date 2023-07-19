@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:sizer/sizer.dart';
 
 
 class CustomButton extends StatefulWidget {
@@ -63,7 +63,7 @@ class _CustomButtonState extends State<CustomButton> {
             primary: (widget.color ?? Colors.blue),
             shape: widget.shape ??
                 RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                  borderRadius: BorderRadius.all(Radius.circular(20.sp)),
                 ),
           ),
           child: (widget.loading != null && widget.loading == true)
