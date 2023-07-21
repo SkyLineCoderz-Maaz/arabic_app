@@ -1,9 +1,8 @@
+import 'package:arabic_app/views/screens/screen_onboarding.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:sizer/sizer.dart';
-
-import 'views/screens/screen_onboarding.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,7 +19,9 @@ class MyApp extends StatelessWidget {
             builder: (context){
               return GetMaterialApp(
                 home: ScreenOnboarding(),
-                theme: new ThemeData(scaffoldBackgroundColor: Colors.white),
+                theme: new ThemeData(scaffoldBackgroundColor: Colors.white,
+                fontFamily: 'ArabicFont'
+                ),
                 debugShowCheckedModeBanner: false,
               );
             }

@@ -11,6 +11,7 @@ class LargeText extends StatelessWidget {
     return Text(text,
       textDirection: TextDirection.rtl,
       style: TextStyle(
+        fontFamily: 'ArabicBold',
         fontWeight: FontWeight.w700,
         fontSize: font??25.sp,
         color: color??Colors.black
@@ -34,6 +35,7 @@ class MediumText extends StatelessWidget {
     return Text(text,
       textDirection: TextDirection.rtl,
       style: TextStyle(
+        fontFamily: 'ArabicFont',
         fontWeight: FontWeight.w600,
         fontSize: font??18.sp,
         color:color?? Colors.black
@@ -58,6 +60,7 @@ class SmallText extends StatelessWidget {
       textAlign: TextAlign.center,
       // textDirection: TextDirection.ltr,
       style: TextStyle(
+        fontFamily: 'ArabicFont',
         fontWeight: FontWeight.w400,
         fontSize: font?? 12.sp,
         color:color?? Colors.grey

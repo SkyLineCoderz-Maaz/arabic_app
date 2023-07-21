@@ -1,4 +1,4 @@
-import 'package:arabic_app/views/screens/screen_forget.dart';
+import 'package:arabic_app/views/screens/screen_new_user.dart';
 import 'package:arabic_app/widgts/Text_Styles.dart';
 import 'package:arabic_app/widgts/custom_button.dart';
 import 'package:flutter/material.dart';
@@ -105,16 +105,11 @@ class _ScreenLoginState extends State<ScreenLogin> {
                 ),
                 Align(
                   alignment: Alignment.centerLeft,
-                  child: InkWell(
-                    onTap: (){
-                      Get.to(ScreenForget());
-                    },
-                    child: SmallText(
-                      text:
-                      'نسيت كلمة المرور ؟',
-                      font: 18.sp,
-                      color: Colors.blue,
-                    ),
+                  child: SmallText(
+                    text:
+                    'نسيت كلمة المرور ؟',
+                    font: 18.sp,
+                    color: Colors.blue,
                   ),
                 ).marginOnly(bottom: 20.sp, top: 5.sp),
                 CustomButton(
@@ -122,7 +117,9 @@ class _ScreenLoginState extends State<ScreenLogin> {
                     height: 40.sp,
                     text: 'تسجيل دخول',
                     textStyle: TextStyle(fontSize: 18.sp),
-                    onPressed: () {}),
+                    onPressed: () {
+                      Get.to(ScreenNewUser());
+                    }),
                 RichText(
                     text: TextSpan(
                         style: TextStyle(

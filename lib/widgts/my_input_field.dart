@@ -217,13 +217,13 @@ class _MyInputField2State extends State<MyInputField2> {
                   bottom: (widget.maxLines != null) ? 15 : 5),
           border: InputBorder.none,
           focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(20.sp)),
-            borderSide: BorderSide(width: 1.5, color: Colors.blueAccent),
+            borderRadius: BorderRadius.all(Radius.circular(5.sp)),
+            borderSide: BorderSide(width: 1.5, color: Colors.white),
           ),
           enabledBorder: widget.enabledBorder ??
               OutlineInputBorder(
-                borderRadius: BorderRadius.all(Radius.circular(20.sp)),
-                borderSide: BorderSide(width: 1.5, color: Colors.blueAccent),
+                borderRadius: BorderRadius.all(Radius.circular(5.sp)),
+                borderSide: BorderSide(width: 1.5, color: Colors.white),
               ),
 
           // filled: true,
